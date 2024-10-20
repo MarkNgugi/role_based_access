@@ -1,0 +1,31 @@
+<ul>
+    {% if is_admin %}
+        <li><a href="{% url 'admin_dashboard' %}">Admin Dashboard</a></li>
+        <li><a href="#">Employee Management</a></li>
+        <li><a href="#">Recruitment and Onboarding</a></li>
+        <li><a href="#">Attendance and Leave Management</a></li>
+        <li><a href="#">Payroll Management</a></li>
+        <li><a href="#">Performance Management</a></li>
+        <li><a href="#">Reporting</a></li>
+    {% endif %}
+    
+    {% if is_hr_manager %}
+        <li><a href="{% url 'hr_dashboard' %}">HR Dashboard</a></li>
+        <li><a href="#">Employee Profiles</a></li>
+        <li><a href="#">Attendance</a></li>
+        <li><a href="#">Performance Reviews</a></li>
+    {% endif %}
+    
+    {% if is_manager %}
+        <li><a href="{% url 'manager_dashboard' %}">Manager Dashboard</a></li>
+        <li><a href="#">Leave Approvals</a></li>
+        <li><a href="#">Team Performance Reviews</a></li>
+    {% endif %}
+    
+    {% if is_employee %}
+        <li><a href="{% url 'employee_dashboard' %}">Employee Dashboard</a></li>
+        <li><a href="#">View Profile</a></li>
+        <li><a href="#">Apply for Leave</a></li>
+        <li><a href="#">View Payslips</a></li>
+    {% endif %}
+</ul>
