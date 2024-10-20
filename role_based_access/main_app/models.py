@@ -8,7 +8,7 @@ def create_groups():
     manager_group, created = Group.objects.get_or_create(name='Manager')
     employee_group, created = Group.objects.get_or_create(name='Employee')
 
-    # Admins - all permissions
+    # Admins - all permissions 
     admin_permissions = Permission.objects.all()  # Get all permissions
     admin_group.permissions.set(admin_permissions)
 
